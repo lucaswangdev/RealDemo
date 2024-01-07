@@ -14,7 +14,23 @@
 		E2338F2E2B4A7D9900D2021F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2338F2D2B4A7D9900D2021F /* Assets.xcassets */; };
 		E2338F312B4A7D9900D2021F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2338F2F2B4A7D9900D2021F /* LaunchScreen.storyboard */; };
 		E2338F342B4A7D9900D2021F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2338F332B4A7D9900D2021F /* main.m */; };
+		E2338F4E2B4AEC1500D2021F /* RealSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2338F4C2B4AEC1500D2021F /* RealSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2338F512B4AECB400D2021F /* RealSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2338F502B4AECB400D2021F /* RealSDK.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E2338F4F2B4AEC1500D2021F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E2338F4E2B4AEC1500D2021F /* RealSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E2338F1E2B4A7D9800D2021F /* RealDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +45,9 @@
 		E2338F302B4A7D9900D2021F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2338F322B4A7D9900D2021F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2338F332B4A7D9900D2021F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2338F432B4AE39B00D2021F /* RealSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2338F4C2B4AEC1500D2021F /* RealSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2338F502B4AECB400D2021F /* RealSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2338F512B4AECB400D2021F /* RealSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +67,7 @@
 			children = (
 				E2338F202B4A7D9800D2021F /* RealDemo */,
 				E2338F1F2B4A7D9800D2021F /* Products */,
+				E2338F3A2B4A7E1900D2021F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +97,16 @@
 			path = RealDemo;
 			sourceTree = "<group>";
 		};
+		E2338F3A2B4A7E1900D2021F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2338F502B4AECB400D2021F /* RealSDK.framework */,
+				E2338F4C2B4AEC1500D2021F /* RealSDK.framework */,
+				E2338F432B4AE39B00D2021F /* RealSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,6 +117,7 @@
 				E2338F1A2B4A7D9800D2021F /* Sources */,
 				E2338F1B2B4A7D9800D2021F /* Frameworks */,
 				E2338F1C2B4A7D9800D2021F /* Resources */,
+				E2338F4F2B4AEC1500D2021F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -6,6 +6,8 @@
 //
 
 #import "AppDelegate.h"
+//#import <RealSDK/RealAd.h>
+//#import <RealSDK/RealAdViewController.h>
 
 @interface AppDelegate ()
 
@@ -16,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // 其他初始化代码
+//    // [self.window makeKeyAndVisible];
+//    
+//    RealAd *ad = [[RealAd alloc] initWithImageUrl:@"adImage.png" linkUrl:@"http://www.baidu.com"];
+//    RealAdViewController *adViewController = [[RealAdViewController alloc] initWithAd:ad];
+//
+//    [self.window.rootViewController presentViewController:adViewController animated:YES completion:nil];
+
+    
     return YES;
 }
 

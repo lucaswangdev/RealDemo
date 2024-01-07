@@ -6,6 +6,9 @@
 //
 
 #import "SceneDelegate.h"
+#import "ViewController.h"
+#import <RealSDK/RealAd.h>
+#import <RealSDK/RealAdViewController.h>
 
 @interface SceneDelegate ()
 
@@ -18,6 +21,30 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+//    UIWindowScene *windowScene = (UIWindowScene *)scene;
+//       self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+//       self.window.frame = windowScene.coordinateSpace.bounds;
+//
+//       // 创建和展示广告
+//       RealAd *ad = [[RealAd alloc] initWithImageUrl:@"https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png" linkUrl:@"http://www.baidu.com"];
+//       RealAdViewController *adViewController = [[RealAdViewController alloc] initWithAd:ad];
+//       self.window.rootViewController = adViewController;
+//
+//       [self.window makeKeyAndVisible];
+    
+    
+        UIWindowScene *windowScene = (UIWindowScene *)scene;
+        self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+        self.window.frame = windowScene.coordinateSpace.bounds;
+
+        // 设置 ViewController 为根视图控制器
+        ViewController *rootViewController = [[ViewController alloc] init];
+        self.window.rootViewController = rootViewController;
+        [self.window makeKeyAndVisible];
+
+        // 可以在 ViewController 的适当位置展示广告
+        // 例如，在 ViewController 的 viewDidLoad 中调用 showAd 方法
 }
 
 
