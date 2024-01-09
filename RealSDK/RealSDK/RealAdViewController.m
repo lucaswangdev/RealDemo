@@ -31,7 +31,7 @@
 //    [self setupAdView];
     self.view.frame = [UIScreen mainScreen].bounds;
     self.view.backgroundColor = [UIColor whiteColor];  // 设置背景颜色为白色
-    [self setupTextView];
+    [self setupBackgroundImage]; // 设置背景图片
     
 //      [super viewDidLoad];
 //       self.view.backgroundColor = [UIColor redColor];
@@ -45,6 +45,19 @@
                                                             selector:@selector(updateCountdown)
                                                             userInfo:nil
                                                              repeats:YES];
+}
+
+- (void)setupBackgroundImage {
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    backgroundImageView.contentMode = UIViewContentModeScaleAspectFill; // 按比例填充，可能会被裁剪
+    backgroundImageView.clipsToBounds = YES;
+
+    // 设置背景图片
+    UIImage *backgroundImage = [UIImage imageNamed:@"splash"]; // 替换为您的图片名称
+    backgroundImageView.image = backgroundImage;
+
+    [self.view addSubview:backgroundImageView];
+    [self.view sendSubviewToBack:backgroundImageView]; // 确保背景图片在视图最底层
 }
 
 - (void)setupAdView {

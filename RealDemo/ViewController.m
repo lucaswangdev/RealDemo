@@ -18,7 +18,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     // 创建并配置 UILabel
     UILabel *label = [[UILabel alloc] init];
-    label.text = @"Hello World";
+    label.text = @"首页";
     label.textColor = [UIColor redColor];
     label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];
