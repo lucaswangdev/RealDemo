@@ -29,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self setupAdView];
+    self.view.frame = [UIScreen mainScreen].bounds;
     self.view.backgroundColor = [UIColor whiteColor];  // 设置背景颜色为白色
     [self setupTextView];
     
@@ -92,15 +93,17 @@
 
 - (void)updateCountdown {
     self.remainingSeconds -= 1;
-    self.countdownLabel.text = [NSString stringWithFormat:@"%ld", (long)self.remainingSeconds];
+    self.countdownLabel.text = [NSString stringWithFormat:@"%ld秒", (long)self.remainingSeconds];
     
     if (self.remainingSeconds <= 0) {
         [self.countdownTimer invalidate];
         self.countdownTimer = nil;
-        [self dismissViewControllerAnimated:YES completion:nil];
-        if ([self.delegate respondsToSelector:@selector(adDidFinish)]) {
-            [self.delegate adDidFinish];
-        }
+        
+        [self dismissViewControllerAnimated:YES completion:^{
+                    if ([self.delegate respondsToSelector:@selector(adDidFinish)]) {
+                        [self.delegate adDidFinish];
+                    }
+                }];
     }
 }
 

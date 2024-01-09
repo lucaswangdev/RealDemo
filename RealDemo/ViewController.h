@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController <RealAdDelegate>
 
+@property (nonatomic) BOOL shouldShowAd;
+
+
 - (void)showAd;  // 声明展示广告的方法
 
 @end
