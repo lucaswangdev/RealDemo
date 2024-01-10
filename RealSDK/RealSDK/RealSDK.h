@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char RealSDKVersionString[];
 #import <RealSDK/RealDog.h>
 #import <RealSDK/RealAd.h>
 #import <RealSDK/RealAdViewController.h>
+#import <RealSDK/PopupView.h>

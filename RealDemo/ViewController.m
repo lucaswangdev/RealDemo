@@ -2,8 +2,13 @@
 #import <RealSDK/RealDog.h>
 #import <RealSDK/RealAdDelegate.h>
 #import <RealSDK/RealAdViewController.h>
+#import <RealSDK/PopupView.h>
+
 
 @interface ViewController () <RealAdDelegate>
+
+@property (strong, nonatomic) PopupView *popupView;
+@property (strong, nonatomic) UIButton *showPopupButton;
 
 @end
 
@@ -27,6 +32,19 @@
         [label.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
         [label.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor]
     ]];
+    
+    // 创建显示弹窗的按钮
+    UIButton *showPopupButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [showPopupButton setTitle:@"打开弹窗" forState:UIControlStateNormal];
+    [showPopupButton addTarget:self action:@selector(showPopup) forControlEvents:UIControlEventTouchUpInside];
+    showPopupButton.frame = CGRectMake(100, 100, 160, 50); // 设置位置和大小
+    [self.view addSubview:showPopupButton];
+
+    // 初始化 PopupView
+    self.popupView = [[PopupView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.popupView];
+    // 初始化时隐藏 PopupView
+    [self.popupView hidePopupView]; 
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -40,6 +58,13 @@
     }
 }
 
+- (void)showPopup {
+    [self.popupView showPopupView];  // 展示 PopupView
+}
+
+- (void)hidePopup {
+    [self.popupView hidePopupView];  // 隐藏 PopupView
+}
 
 - (void)showAd {
     RealAdViewController *adVC = [[RealAdViewController alloc] init];
