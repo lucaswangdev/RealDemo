@@ -9,8 +9,8 @@
 
 @interface PopupView : UIView
 
-- (void)showInView:(UIView *)view;
-- (void)dismiss;
+//- (void)showInView:(UIView *)view;
+//- (void)dismiss;
 - (void)showPopupView;
 - (void)hidePopupView;
 

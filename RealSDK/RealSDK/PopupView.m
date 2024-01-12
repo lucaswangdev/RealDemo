@@ -62,14 +62,15 @@
 }
 
 
-- (void)showInView:(UIView *)view {
-    self.center = view.center;
-    [view addSubview:self];
-}
+//- (void)showInView:(UIView *)view {
+//    self.center = view.center;
+//    [view addSubview:self];
+//}
+//
+//- (void)dismiss {
+//    [self removeFromSuperview];
+//}
 
-- (void)dismiss {
-    [self removeFromSuperview];
-}
 
 - (void)showPopupView {
     NSLog(@"showPopupView");

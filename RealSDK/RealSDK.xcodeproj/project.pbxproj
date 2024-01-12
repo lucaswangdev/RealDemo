@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90F1CD4A2555A0AAD26843D5 /* Pods_RealSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD400FF4793E4488C2C64D9 /* Pods_RealSDK.framework */; };
 		E2338EE32B4A732500D2021F /* RealSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E2338EE22B4A732500D2021F /* RealSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2338F3E2B4ADF8700D2021F /* RealDog.h in Headers */ = {isa = PBXBuildFile; fileRef = E2338F3D2B4ADF8700D2021F /* RealDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2338F422B4AE0B200D2021F /* RealDog.m in Sources */ = {isa = PBXBuildFile; fileRef = E2338F412B4AE0B200D2021F /* RealDog.m */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D9CF16CDBE48E1E382FC804 /* Pods-RealSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealSDK.release.xcconfig"; path = "Target Support Files/Pods-RealSDK/Pods-RealSDK.release.xcconfig"; sourceTree = "<group>"; };
+		A528D53A5ADCEF61C2EFBC4A /* Pods-RealSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealSDK.debug.xcconfig"; path = "Target Support Files/Pods-RealSDK/Pods-RealSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		BFD400FF4793E4488C2C64D9 /* Pods_RealSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2338EDF2B4A732500D2021F /* RealSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2338EE22B4A732500D2021F /* RealSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealSDK.h; sourceTree = "<group>"; };
 		E2338F3D2B4ADF8700D2021F /* RealDog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealDog.h; sourceTree = "<group>"; };
@@ -38,17 +42,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F1CD4A2555A0AAD26843D5 /* Pods_RealSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61B9BCFFE3FD7B355BFBE9FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A528D53A5ADCEF61C2EFBC4A /* Pods-RealSDK.debug.xcconfig */,
+				2D9CF16CDBE48E1E382FC804 /* Pods-RealSDK.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		90A875772AFB99BE76AA1357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFD400FF4793E4488C2C64D9 /* Pods_RealSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E2338ED52B4A732500D2021F = {
 			isa = PBXGroup;
 			children = (
 				E2338EE12B4A732500D2021F /* RealSDK */,
 				E2338EE02B4A732500D2021F /* Products */,
+				61B9BCFFE3FD7B355BFBE9FF /* Pods */,
+				90A875772AFB99BE76AA1357 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +125,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2338EE62B4A732500D2021F /* Build configuration list for PBXNativeTarget "RealSDK" */;
 			buildPhases = (
+				11403FF8C5C499E7DFC30CCD /* [CP] Check Pods Manifest.lock */,
 				E2338EDA2B4A732500D2021F /* Headers */,
 				E2338EDB2B4A732500D2021F /* Sources */,
 				E2338EDC2B4A732500D2021F /* Frameworks */,
@@ -155,6 +181,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11403FF8C5C499E7DFC30CCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RealSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E2338EDB2B4A732500D2021F /* Sources */ = {
@@ -295,6 +346,7 @@
 		};
 		E2338EE72B4A732500D2021F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A528D53A5ADCEF61C2EFBC4A /* Pods-RealSDK.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -324,6 +376,7 @@
 		};
 		E2338EE82B4A732500D2021F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D9CF16CDBE48E1E382FC804 /* Pods-RealSDK.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
