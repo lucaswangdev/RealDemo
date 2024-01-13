@@ -48,6 +48,7 @@
 		E2338F302B4A7D9900D2021F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2338F322B4A7D9900D2021F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2338F332B4A7D9900D2021F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2466AA12B52372300FD6F2D /* RealSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 		709D085CE6E019433F5FD5FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2466AA12B52372300FD6F2D /* RealSDK.framework */,
 				65869A5DEACFD7B499A8A532 /* Pods_RealDemo.framework */,
 			);
 			name = Frameworks;

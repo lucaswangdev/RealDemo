@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90F1CD4A2555A0AAD26843D5 /* Pods_RealSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD400FF4793E4488C2C64D9 /* Pods_RealSDK.framework */; };
 		E2338EE32B4A732500D2021F /* RealSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E2338EE22B4A732500D2021F /* RealSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2338F3E2B4ADF8700D2021F /* RealDog.h in Headers */ = {isa = PBXBuildFile; fileRef = E2338F3D2B4ADF8700D2021F /* RealDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2338F422B4AE0B200D2021F /* RealDog.m in Sources */ = {isa = PBXBuildFile; fileRef = E2338F412B4AE0B200D2021F /* RealDog.m */; };
@@ -16,9 +15,25 @@
 		E2338F572B4AF07800D2021F /* RealAdViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E2338F562B4AF07500D2021F /* RealAdViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2338F592B4AF08700D2021F /* RealAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2338F582B4AF08700D2021F /* RealAdViewController.m */; };
 		E2338F5B2B4B02A600D2021F /* RealAdDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E2338F5A2B4B02A300D2021F /* RealAdDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2466AA32B5238AE00FD6F2D /* Pods_RealSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD400FF4793E4488C2C64D9 /* Pods_RealSDK.framework */; };
+		E2466AA42B5238AE00FD6F2D /* Pods_RealSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFD400FF4793E4488C2C64D9 /* Pods_RealSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2F00B7B2B4ED4000020F146 /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F00B792B4ED4000020F146 /* PopupView.m */; };
 		E2F00B7C2B4ED4C30020F146 /* PopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = E2F00B7A2B4ED4000020F146 /* PopupView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E2466AA52B5238AF00FD6F2D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E2466AA42B5238AE00FD6F2D /* Pods_RealSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D9CF16CDBE48E1E382FC804 /* Pods-RealSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealSDK.release.xcconfig"; path = "Target Support Files/Pods-RealSDK/Pods-RealSDK.release.xcconfig"; sourceTree = "<group>"; };
@@ -42,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90F1CD4A2555A0AAD26843D5 /* Pods_RealSDK.framework in Frameworks */,
+				E2466AA32B5238AE00FD6F2D /* Pods_RealSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +70,6 @@
 				A528D53A5ADCEF61C2EFBC4A /* Pods-RealSDK.debug.xcconfig */,
 				2D9CF16CDBE48E1E382FC804 /* Pods-RealSDK.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +144,7 @@
 				E2338EDB2B4A732500D2021F /* Sources */,
 				E2338EDC2B4A732500D2021F /* Frameworks */,
 				E2338EDD2B4A732500D2021F /* Resources */,
+				E2466AA52B5238AF00FD6F2D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

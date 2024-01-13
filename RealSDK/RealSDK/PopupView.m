@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PopupView.h"
+#import <SDWebImage/SDWebImage.h>
 
 @interface PopupView ()
 
@@ -39,14 +40,25 @@
     self.layer.cornerRadius = 10;
     self.clipsToBounds = YES;
 
+//     // 设置 imageView 的大小和位置
+//     CGSize imageViewSize = CGSizeMake(260, 140);
+//     CGPoint imageViewOrigin = CGPointMake((self.bounds.size.width - imageViewSize.width) / 2,
+//                                           (self.bounds.size.height - imageViewSize.height) / 2);
+//
+//     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"popview"]];
+//     imageView.frame = CGRectMake(imageViewOrigin.x, imageViewOrigin.y, imageViewSize.width, imageViewSize.height);
+//     imageView.contentMode = UIViewContentModeScaleAspectFit;
+//     [self addSubview:imageView];
+
     // 设置 imageView 的大小和位置
     CGSize imageViewSize = CGSizeMake(260, 140);
     CGPoint imageViewOrigin = CGPointMake((self.bounds.size.width - imageViewSize.width) / 2,
-                                          (self.bounds.size.height - imageViewSize.height) / 2);
-
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"popview"]];
-    imageView.frame = CGRectMake(imageViewOrigin.x, imageViewOrigin.y, imageViewSize.width, imageViewSize.height);
+                                        (self.bounds.size.height - imageViewSize.height) / 2);
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(imageViewOrigin.x, imageViewOrigin.y, imageViewSize.width, imageViewSize.height)];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
+    // 使用SDWebImage加载网络图片
+    NSURL *url = [NSURL URLWithString:@"https://bpic.588ku.com/mainSite/basic/quick_methods_bg.png"];
+    [imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"popview"]];
     [self addSubview:imageView];
 
     // 设置关闭按钮的位置在 imageView 的右上角，距离上边距和右边距均为10

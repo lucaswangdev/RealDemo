@@ -11,5 +11,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
   spec.source       = { :path => "." }
   spec.source_files  = "RealSDK/**/*.{h,m,swift}"
+  spec.frameworks = "UIKit", "Foundation"
+  spec.dependency "SDWebImage", "~> 5.0"
   spec.requires_arc = true
 end
