@@ -76,6 +76,26 @@
 #pragma mark - RealAdDelegate
 
 
+#pragma mark - SplashAdDelegate Methods
+
+- (void)splashAdSuccessPresentScreen {
+    NSLog(@"Splash Ad Successfully Presented on Screen");
+}
+
+- (void)splashAdFailToPresentWithError:(NSError *)error {
+    NSLog(@"Splash Ad Failed to Present: %@", error.localizedDescription);
+}
+
+- (void)splashAdClicked {
+    NSLog(@"Splash Ad Clicked");
+}
+
+- (void)splashAdClosed {
+    NSLog(@"Splash Ad Closed");
+}
+
+// ... 实现其他代理方法 ...
+
 - (void)adDidFinish {
     // 广告显示结束后的逻辑
     // 在这里，您可能不需要做任何事情，因为您已经在 ViewController 中
