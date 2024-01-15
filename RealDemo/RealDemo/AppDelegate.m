@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 //#import <RealSDK/RealAd.h>
 //#import <RealSDK/RealAdViewController.h>
+#import <RealSDK/SplashViewController.h>
 
 @interface AppDelegate ()
 
@@ -26,6 +27,13 @@
 //    RealAdViewController *adViewController = [[RealAdViewController alloc] initWithAd:ad];
 //
 //    [self.window.rootViewController presentViewController:adViewController animated:YES completion:nil];
+    
+     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+     SplashViewController *splashVC = [[SplashViewController alloc] init];
+     self.window.rootViewController = splashVC;
+
+     [self.window makeKeyAndVisible];
 
     
     return YES;

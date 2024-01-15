@@ -52,10 +52,10 @@
     
     // 展示广告
     //    [self showAd];
-    if (self.shouldShowAd) {
-          [self showAd];
-          self.shouldShowAd = NO;  // 展示一次广告后设置为 NO
-    }
+//    if (self.shouldShowAd) {
+//          [self showAd];
+//          self.shouldShowAd = NO;  // 展示一次广告后设置为 NO
+//    }
 }
 
 - (void)showPopup {
