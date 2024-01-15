@@ -7,6 +7,6 @@ target 'RealDemo' do
 
   # Pods for RealDemo
   # 本地路径依赖
-  pod 'RealSDK', :path => './RealSDK'
+  pod 'RealSDK', :path => '../RealSDK'
 
 end

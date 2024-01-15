@@ -209,3 +209,21 @@ Pod::Spec.new do |spec|
 end
 
 ```
+
+
+如果您想在每次 Xcode 构建时都执行 pod install，无论 Pods 目录是否存在，您可以简化 Run Script 如下：
+
+添加 Run Script Phase
+在 Xcode 中，打开您的项目，并在 Targets 列表中选择您的应用目标。
+
+转到 "Build Phases" 选项卡。
+
+点击左上角的 "+" 按钮，然后选择 "New Run Script Phase"。
+
+在新创建的 Run Script 部分中，添加以下脚本：
+
+```bash
+cd "${SRCROOT}"
+echo "Installing Pods"
+pod install
+```

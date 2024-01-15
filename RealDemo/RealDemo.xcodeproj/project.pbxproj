@@ -130,6 +130,7 @@
 				E2338F1C2B4A7D9800D2021F /* Resources */,
 				E29256182B5188C900D792B7 /* Embed Frameworks */,
 				AE05CBCF806107E59B2A1891 /* [CP] Embed Pods Frameworks */,
+				E2243E012B558B96009E1FCA /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -202,6 +203,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RealDemo/Pods-RealDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E2243E012B558B96009E1FCA /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${SRCROOT}\"\necho \"Installing Pods\"\npod install\n";
 		};
 		FFBCDA3F5C881BC3687DD231 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
