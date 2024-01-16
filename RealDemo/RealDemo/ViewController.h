@@ -6,14 +6,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RealSDK/RealAdDelegate.h>  // 确保导入 RealAdDelegate
+#import <RealSDK/SplashAdDelegate.h>
+#import <RealSDK/SplashAd.h>
 
-@interface ViewController : UIViewController <RealAdDelegate>
+@interface ViewController : UIViewController <SplashAdDelegate>
 
-@property (nonatomic) BOOL shouldShowAd;
+//@property (nonatomic) BOOL shouldShowAd;
 
 
-- (void)showAd;  // 声明展示广告的方法
+//- (void)showAd;  // 声明展示广告的方法
 
 @end
 

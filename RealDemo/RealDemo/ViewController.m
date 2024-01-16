@@ -3,12 +3,14 @@
 #import <RealSDK/RealAdDelegate.h>
 #import <RealSDK/RealAdViewController.h>
 #import <RealSDK/PopupView.h>
+#import <RealSDK/SplashAd.h>
 
 
-@interface ViewController () <RealAdDelegate>
+@interface ViewController () <SplashAdDelegate>
 
 @property (strong, nonatomic) PopupView *popupView;
 @property (strong, nonatomic) UIButton *showPopupButton;
+@property (strong, nonatomic) SplashAd *splashAd;
 
 @end
 
@@ -17,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [RealDog eat];
-    self.shouldShowAd = YES;  // 初始时设置为 YES
+//    self.shouldShowAd = YES;  // 初始时设置为 YES
 
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -44,7 +46,16 @@
     self.popupView = [[PopupView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.popupView];
     // 初始化时隐藏 PopupView
-    [self.popupView hidePopupView]; 
+    [self.popupView hidePopupView];
+    
+    
+    // 创建splashAd实例，展示广告，设置代理
+    self.splashAd = [[SplashAd alloc] initWithAdId:@"your_ad_id"];
+    self.splashAd.delegate = self;
+    // 获取当前的UIWindow
+    UIWindow *currentWindow = [UIApplication sharedApplication].keyWindow;
+    // 展示广告
+    [self.splashAd showInWindow:currentWindow];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -66,12 +77,12 @@
     [self.popupView hidePopupView];  // 隐藏 PopupView
 }
 
-- (void)showAd {
-    RealAdViewController *adVC = [[RealAdViewController alloc] init];
-    adVC.delegate = self;
-    adVC.modalPresentationStyle = UIModalPresentationFullScreen; // 设置为全屏展示
-    [self presentViewController:adVC animated:YES completion:nil];
-}
+//- (void)showAd {
+//    RealAdViewController *adVC = [[RealAdViewController alloc] init];
+//    adVC.delegate = self;
+//    adVC.modalPresentationStyle = UIModalPresentationFullScreen; // 设置为全屏展示
+//    [self presentViewController:adVC animated:YES completion:nil];
+//}
 
 #pragma mark - RealAdDelegate
 
@@ -95,12 +106,5 @@
 }
 
 // ... 实现其他代理方法 ...
-
-- (void)adDidFinish {
-    // 广告显示结束后的逻辑
-    // 在这里，您可能不需要做任何事情，因为您已经在 ViewController 中
-    // 如果需要更新界面或执行其他操作，可以在这里添加代码
-    NSLog(@"adDidFinish");
-}
 
 @end

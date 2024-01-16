@@ -6,9 +6,7 @@
 //
 
 #import "AppDelegate.h"
-//#import <RealSDK/RealAd.h>
-//#import <RealSDK/RealAdViewController.h>
-#import <RealSDK/SplashViewController.h>
+#import <RealSDK/SplashAd.h>
 
 @interface AppDelegate ()
 
@@ -19,23 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    // 其他初始化代码
-//    // [self.window makeKeyAndVisible];
-//    
-//    RealAd *ad = [[RealAd alloc] initWithImageUrl:@"adImage.png" linkUrl:@"http://www.baidu.com"];
-//    RealAdViewController *adViewController = [[RealAdViewController alloc] initWithAd:ad];
-//
-//    [self.window.rootViewController presentViewController:adViewController animated:YES completion:nil];
     
-     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-     SplashViewController *splashVC = [[SplashViewController alloc] init];
-     self.window.rootViewController = splashVC;
-
-     [self.window makeKeyAndVisible];
-
-    
+    NSLog(@"SplashAd 初始化，加载广告资源");
+    // 初始化，加载广告资源
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    SplashAd *splashAd = [[SplashAd alloc] initWithAdId:@"your_ad_id"];
+    [splashAd loadAd];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
