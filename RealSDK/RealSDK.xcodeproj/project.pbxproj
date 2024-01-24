@@ -20,6 +20,8 @@
 		E2338F5B2B4B02A600D2021F /* RealAdDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E2338F5A2B4B02A300D2021F /* RealAdDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2466AA32B5238AE00FD6F2D /* Pods_RealSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD400FF4793E4488C2C64D9 /* Pods_RealSDK.framework */; };
 		E2466AA42B5238AE00FD6F2D /* Pods_RealSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFD400FF4793E4488C2C64D9 /* Pods_RealSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2B324662B61594200DC8F16 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B324652B61594200DC8F16 /* Network.m */; };
+		E2B324672B61598100DC8F16 /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = E2B324642B61593500DC8F16 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2F00B7B2B4ED4000020F146 /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F00B792B4ED4000020F146 /* PopupView.m */; };
 		E2F00B7C2B4ED4C30020F146 /* PopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = E2F00B7A2B4ED4000020F146 /* PopupView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		E2338F562B4AF07500D2021F /* RealAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealAdViewController.h; sourceTree = "<group>"; };
 		E2338F582B4AF08700D2021F /* RealAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealAdViewController.m; sourceTree = "<group>"; };
 		E2338F5A2B4B02A300D2021F /* RealAdDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealAdDelegate.h; sourceTree = "<group>"; };
+		E2B324642B61593500DC8F16 /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		E2B324652B61594200DC8F16 /* Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
 		E2F00B792B4ED4000020F146 /* PopupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupView.m; sourceTree = "<group>"; };
 		E2F00B7A2B4ED4000020F146 /* PopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopupView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +117,8 @@
 				E2F00B7A2B4ED4000020F146 /* PopupView.h */,
 				E2F00B792B4ED4000020F146 /* PopupView.m */,
 				E2338F492B4AE9F700D2021F /* RealAd.m */,
+				E2B324642B61593500DC8F16 /* Network.h */,
+				E2B324652B61594200DC8F16 /* Network.m */,
 				E2338F562B4AF07500D2021F /* RealAdViewController.h */,
 				E2338F582B4AF08700D2021F /* RealAdViewController.m */,
 				E2338F5A2B4B02A300D2021F /* RealAdDelegate.h */,
@@ -139,6 +145,7 @@
 				E2338EE32B4A732500D2021F /* RealSDK.h in Headers */,
 				E2243E102B559B05009E1FCA /* SplashAd.h in Headers */,
 				E2338F3E2B4ADF8700D2021F /* RealDog.h in Headers */,
+				E2B324672B61598100DC8F16 /* Network.h in Headers */,
 				E2338F4B2B4AEA0100D2021F /* RealAd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +249,7 @@
 				E2F00B7B2B4ED4000020F146 /* PopupView.m in Sources */,
 				E2243E092B559998009E1FCA /* SplashAd.m in Sources */,
 				E2338F422B4AE0B200D2021F /* RealDog.m in Sources */,
+				E2B324662B61594200DC8F16 /* Network.m in Sources */,
 				E2338F592B4AF08700D2021F /* RealAdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

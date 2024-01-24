@@ -4,6 +4,7 @@
 #import <RealSDK/RealAdViewController.h>
 #import <RealSDK/PopupView.h>
 #import <RealSDK/SplashAd.h>
+#import <RealSDK/Network.h>
 
 
 @interface ViewController () <SplashAdDelegate>
@@ -71,6 +72,44 @@
 
 - (void)showPopup {
     [self.popupView showPopupView];  // 展示 PopupView
+    
+    // 获取设备的 IDFA
+    NSString *idfaString = @"xxxxidf";
+
+    // 请求参数
+    NSDictionary *parameters = @{
+        @"id": @"123",
+        @"token": idfaString
+    };
+//    // 获取图片广告数据
+//    [Network sendRequestWithMethod:HTTPMethodGET endpoint:@"/users/userId" parameters:parameters success:^(NSDictionary *response) {
+//        // 处理图片广告数据
+//        NSLog(@"Response: %@", response);
+//        
+//        NSString *name = response[@"name"];
+//        BOOL success = [response[@"success"] boolValue];
+//        
+//        NSLog(@"Name: %@", name);
+//        NSLog(@"Success: %@", success ? @"YES" : @"NO");
+//    } failure:^(NSError *error) {
+//        // 处理错误
+//        NSLog(@"Error: %@", error.localizedDescription);
+//    }];
+    
+    // 获取图片广告数据
+    [Network sendRequestWithMethod:HTTPMethodPOST endpoint:@"/users/userId2" parameters:parameters success:^(NSDictionary *response) {
+        // 处理图片广告数据
+        NSLog(@"Response: %@", response);
+        
+        NSString *name = response[@"name"];
+        BOOL success = [response[@"success"] boolValue];
+        
+        NSLog(@"Name: %@", name);
+        NSLog(@"Success: %@", success ? @"YES" : @"NO");
+    } failure:^(NSError *error) {
+        // 处理错误
+        NSLog(@"Error: %@", error.localizedDescription);
+    }];
 }
 
 - (void)hidePopup {
