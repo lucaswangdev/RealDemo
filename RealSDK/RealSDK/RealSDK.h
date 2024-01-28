@@ -21,3 +21,4 @@ FOUNDATION_EXPORT const unsigned char RealSDKVersionString[];
 #import <RealSDK/PopupView.h>
 #import <RealSDK/SplashAd.h>
 #import <RealSDK/SplashAdDelegate.h>
+#import <RealSDK/Network.h>

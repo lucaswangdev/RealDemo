@@ -96,20 +96,63 @@
 //        NSLog(@"Error: %@", error.localizedDescription);
 //    }];
     
-    // 获取图片广告数据
-    [Network sendRequestWithMethod:HTTPMethodPOST endpoint:@"/users/userId2" parameters:parameters success:^(NSDictionary *response) {
-        // 处理图片广告数据
-        NSLog(@"Response: %@", response);
-        
-        NSString *name = response[@"name"];
-        BOOL success = [response[@"success"] boolValue];
-        
-        NSLog(@"Name: %@", name);
-        NSLog(@"Success: %@", success ? @"YES" : @"NO");
+//    // 获取图片广告数据
+//    [Network sendRequestWithMethod:HTTPMethodPOST endpoint:@"/users/userId2" parameters:parameters success:^(NSDictionary *response) {
+//        // 处理图片广告数据
+//        NSLog(@"Response: %@", response);
+//        
+//        NSString *name = response[@"name"];
+//        BOOL success = [response[@"success"] boolValue];
+//        
+//        NSLog(@"Name: %@", name);
+//        NSLog(@"Success: %@", success ? @"YES" : @"NO");
+//    } failure:^(NSError *error) {
+//        // 处理错误
+//        NSLog(@"Error: %@", error.localizedDescription);
+//    }];
+    
+    dispatch_group_t group = dispatch_group_create();
+
+    __block NSDictionary *firstResponse;
+    __block BOOL shouldPerformSecondRequest = NO;
+
+    NSLog(@"Starting first request");
+    dispatch_group_enter(group);
+    [Network sendRequestWithMethod:HTTPMethodGET endpoint:@"/users/userId" parameters:nil success:^(NSDictionary *response) {
+        firstResponse = response;
+        NSLog(@"First Response: %@", response);
+
+         // 判断是否满足执行第二个请求的条件
+//        if (/* 条件判断，例如检查 response 中的某个值 */) {
+//            shouldPerformSecondRequest = YES;
+//        }
+        shouldPerformSecondRequest = YES;
+        dispatch_group_leave(group);
     } failure:^(NSError *error) {
-        // 处理错误
-        NSLog(@"Error: %@", error.localizedDescription);
+        NSLog(@"First request error: %@", error);
+        dispatch_group_leave(group);
     }];
+
+    // 当第一个请求完成后执行
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        if (shouldPerformSecondRequest) {
+            NSLog(@"Condition met, starting second request");
+            [Network sendRequestWithMethod:HTTPMethodPOST endpoint:@"/users/userId2" parameters:firstResponse success:^(NSDictionary *secondResponse) {
+                // 处理第二个请求的响应
+                NSLog(@"Second Response: %@", secondResponse);
+            } failure:^(NSError *error) {
+                // 处理第二个请求的错误
+                NSLog(@"Second request error: %@", error);
+            }];
+        } else {
+            NSLog(@"Condition not met, skipping second request");
+        }
+
+        NSLog(@"All requests completed");
+        // 这里处理所有请求完成后的逻辑
+    });
+
+
 }
 
 - (void)hidePopup {
