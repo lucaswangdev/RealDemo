@@ -244,4 +244,15 @@ gem install cocoapods-packager
 
 # 安装1.8.4版本的 cocoapods
  sudo gem install -n /usr/local/bin cocoapods -v 1.8.4
+
+#  https://github.com/CocoaPods/cocoapods-packager/issues/282
+# update /Library/Ruby/Gems/2.6.0/gems/cocoapods-packager-1.5.0/lib/cocoapods-packager/builder.rb
+def ios_build_options
+      "ARCHS=\'$(ARCHS_STANDARD)\' OTHER_CFLAGS=\'-fembed-bitcode -Qunused-arguments\'"
+end
+
+
+pod deintegrate
+pod install
+
 ```

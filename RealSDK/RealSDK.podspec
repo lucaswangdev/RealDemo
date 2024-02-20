@@ -8,9 +8,9 @@ Pod::Spec.new do |spec|
   spec.homepage     = "http://github.com/lucaswangdev/RealSDK"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Your Name" => "your_email@example.com" }
-  spec.platform     = :ios, "9.0"
-  spec.source       = { :path => "." }
-  # spec.source       = { :git => 'https://github.com/lucaswangdev/RealDemo.git', :branch => 'master' }
+  spec.platform     = :ios, "12.0"
+  # spec.source       = { :path => "." }
+  spec.source       = { :git => 'https://github.com/lucaswangdev/RealDemo.git', :branch => 'master' }
   spec.source_files  = "RealSDK/**/*.{h,m,swift}"
   spec.frameworks = "UIKit", "Foundation"
   spec.dependency "SDWebImage", "~> 5.0"
