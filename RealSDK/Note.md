@@ -227,3 +227,21 @@ cd "${SRCROOT}"
 echo "Installing Pods"
 pod install
 ```
+
+#### 打包相关
+```bash
+xcode-select --install
+
+brew install rbenv ruby-build
+
+# 安装ruby版本
+rbenv install 2.7.2
+rbenv global 2.7.2
+
+# 安装 cocoapods 打包插件
+gem install cocoapods-packager
+
+
+# 安装1.8.4版本的 cocoapods
+ sudo gem install -n /usr/local/bin cocoapods -v 1.8.4
+```
