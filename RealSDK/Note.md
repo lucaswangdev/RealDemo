@@ -256,3 +256,7 @@ pod deintegrate
 pod install
 
 ```
+
+ios-pod-package: https://www.sunmoonblog.com/2020/11/27/ios-pod-package/
+【cocoapods】-cocoapods-packager打包静态库: https://www.jianshu.com/p/f35220f6f350
+Xcode创建自己的静态库 .a和 .Framework: https://www.jianshu.com/p/2f2778a6fd7c
