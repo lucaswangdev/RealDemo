@@ -14,6 +14,8 @@
 		E2338F2E2B4A7D9900D2021F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2338F2D2B4A7D9900D2021F /* Assets.xcassets */; };
 		E2338F312B4A7D9900D2021F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2338F2F2B4A7D9900D2021F /* LaunchScreen.storyboard */; };
 		E2338F342B4A7D9900D2021F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2338F332B4A7D9900D2021F /* main.m */; };
+		E29564F92B90CE0D00CFAF3B /* RealSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29564F82B90CE0D00CFAF3B /* RealSDK.xcframework */; };
+		E29564FD2B90D6C000CFAF3B /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29564FC2B90D6C000CFAF3B /* SDWebImage.xcframework */; };
 		E2BF545A2B518BC00020CBD7 /* Pods_RealDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65869A5DEACFD7B499A8A532 /* Pods_RealDemo.framework */; };
 		E2BF545B2B518BC00020CBD7 /* Pods_RealDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65869A5DEACFD7B499A8A532 /* Pods_RealDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		E2338F322B4A7D9900D2021F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2338F332B4A7D9900D2021F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2466AA12B52372300FD6F2D /* RealSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29564F82B90CE0D00CFAF3B /* RealSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RealSDK.xcframework; sourceTree = "<group>"; };
+		E29564FC2B90D6C000CFAF3B /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SDWebImage.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29564F92B90CE0D00CFAF3B /* RealSDK.xcframework in Frameworks */,
+				E29564FD2B90D6C000CFAF3B /* SDWebImage.xcframework in Frameworks */,
 				E2BF545A2B518BC00020CBD7 /* Pods_RealDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +99,8 @@
 		E2338F202B4A7D9800D2021F /* RealDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E29564FC2B90D6C000CFAF3B /* SDWebImage.xcframework */,
+				E29564F82B90CE0D00CFAF3B /* RealSDK.xcframework */,
 				E2338F212B4A7D9800D2021F /* AppDelegate.h */,
 				E2338F222B4A7D9800D2021F /* AppDelegate.m */,
 				E2338F242B4A7D9800D2021F /* SceneDelegate.h */,
@@ -129,8 +137,8 @@
 				E2338F1B2B4A7D9800D2021F /* Frameworks */,
 				E2338F1C2B4A7D9800D2021F /* Resources */,
 				E29256182B5188C900D792B7 /* Embed Frameworks */,
-				AE05CBCF806107E59B2A1891 /* [CP] Embed Pods Frameworks */,
 				E2243E012B558B96009E1FCA /* Run Script */,
+				71A4975B64A346D7D9CAB8AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,7 +195,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AE05CBCF806107E59B2A1891 /* [CP] Embed Pods Frameworks */ = {
+		71A4975B64A346D7D9CAB8AD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -405,6 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TGR78X4243;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RealDemo/Info.plist;
@@ -413,6 +422,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -422,6 +432,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
@@ -433,6 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TGR78X4243;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RealDemo/Info.plist;
@@ -441,6 +453,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,6 +463,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Release;
 		};

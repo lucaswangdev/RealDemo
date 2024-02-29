@@ -260,3 +260,21 @@ pod install
 ios-pod-package: https://www.sunmoonblog.com/2020/11/27/ios-pod-package/
 【cocoapods】-cocoapods-packager打包静态库: https://www.jianshu.com/p/f35220f6f350
 Xcode创建自己的静态库 .a和 .Framework: https://www.jianshu.com/p/2f2778a6fd7c
+
+#### 手动打包相关
+```
+1、SDK设置DISTRIBUTION
+Build Settings => BUILD_LIBRARY_FOR_DISTRIBUTION 设置为 YES
+
+2、Schema设置
+Product => Schema => Edit Scheme... => Build Configuration: release, Executable: None
+
+3、分别在模拟器、Any iOS Device下面编译，进入到 Build 文件夹，
+ xcodebuild -create-xcframework -framework ./Release-iphonesimulator/RealSDK/RealSDK.framework  -framework ./Release-iphoneos/RealSDK/RealSDK.framework -output ./RealSDK.xcframework
+
+
+ xcodebuild -create-xcframework -framework ./Release-iphonesimulator/SDWebImage/SDWebImage.framework  -framework ./Release-iphoneos/SDWebImage/SDWebImage.framework -output ./SDWebImage.xcframework
+
+4、将RealSDK.xcframework文件夹拖进App项目即可
+```
+参考：https://juejin.cn/post/7290375566255259687

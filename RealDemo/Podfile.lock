@@ -1,25 +1,18 @@
 PODS:
-  - RealSDK (0.1.0):
-    - SDWebImage (~> 5.0)
   - SDWebImage (5.18.10):
     - SDWebImage/Core (= 5.18.10)
   - SDWebImage/Core (5.18.10)
 
 DEPENDENCIES:
-  - RealSDK (from `../RealSDK`)
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
     - SDWebImage
 
-EXTERNAL SOURCES:
-  RealSDK:
-    :path: "../RealSDK"
-
 SPEC CHECKSUMS:
-  RealSDK: 429796ff35440f1ff0f99468c4610b2646e1285d
   SDWebImage: fc8f2d48bbfd72ef39d70e981bd24a3f3be53fec
 
-PODFILE CHECKSUM: 8fe18e1bb51f2aaa99340bb3fd3dc34254b69f98
+PODFILE CHECKSUM: f76dfa0179d8c4e9cff8bbf5db4a3479ff5ad77a
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.8.4
